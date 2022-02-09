@@ -2,7 +2,7 @@ Citizen.CreateThread(function()
     while true do
       Wait(0)
       if Reticle.ReticleVehicle == true then   -- MIRA EN COCHE
-       playerdist = GetEntityCoords()
+       playerdist = GetEntityCoords(PlayerPedId())
        dist = GetDistanceBetweenCoords(playerdist - GetClosestVehicle())
       if dist < 20 then
     if IsPedInAnyVehicle(PlayerPedId(), false) then
@@ -14,7 +14,7 @@ Citizen.CreateThread(function()
       Citizen.Wait(math.ceil(dist * 20))
     end
   else 
-    Wait(1000000000)
+    Wait(1000)
   end
   end
   end)
