@@ -29,7 +29,7 @@ Citizen.CreateThread(function()
             end
                     if Reticle.ReticleDisableOnMoving == true then  --QUITAR LA RETÍCULA CUANDO CAMINAS, PERO TENRLA SI APUNTAS Y NO TE MUEVES
                         if IsControlPressed(0, 25) and IsControlPressed(0, 32) or IsControlPressed(0, 25) and IsControlPressed(0, 33) or IsControlPressed(0, 25) and IsControlPressed(0, 34) or IsControlPressed(0, 25) and IsControlPressed(0, 35) then
-                        HideHudComponentThisFrame(14)
+                          HideHudComponentThisFrame(14)
                         end
                     end
                             if Reticle.Recoil == true then --AÑADIR RECOIL AL DISPARAR MIENTRAS TE MUEVES
@@ -62,7 +62,6 @@ Citizen.CreateThread(function()
               local getheightrecoil = GetGameplayCamRelativePitch()
               local heightrecoil = math.random() + math.random()
               SetGameplayCamRelativePitch(getheightrecoil + heightrecoil * ThirdPersonAimingMultiplier, 1.0)
-              Citizen.Wait(0)
           end
       end
   end
