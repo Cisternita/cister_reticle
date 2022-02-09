@@ -2,19 +2,13 @@ Citizen.CreateThread(function()
     while true do
       Wait(0)
       if Reticle.ReticleVehicle == true then   -- MIRA EN COCHE
-       playerdist = GetEntityCoords(PlayerPedId())
-       dist = GetDistanceBetweenCoords(playerdist - GetClosestVehicle())
-      if dist < 20 then
     if IsPedInAnyVehicle(PlayerPedId(), false) then
           HideHudComponentThisFrame(14)
       else
           Wait(1500)
       end
     else
-      Citizen.Wait(math.ceil(dist * 20))
-    end
-  else 
-    Wait(1000)
+      Wait(1000)
   end
   end
   end)
@@ -34,7 +28,7 @@ Citizen.CreateThread(function()
                     end
                             if Reticle.Recoil == true then --AÑADIR RECOIL AL DISPARAR MIENTRAS TE MUEVES
                                 if IsControlPressed(0, 25) and IsControlPressed(0, 32) or IsControlPressed(0, 25) and IsControlPressed(0, 33) or IsControlPressed(0, 25) and IsControlPressed(0, 34) or IsControlPressed(0, 25) and IsControlPressed(0, 35) then
-                                    if IsPedShooting(PlayerPedId()) then
+                                    if IsPedShooting(PlayerPedId()) and not IsPedInAnyVehicle(PlayerPedId(), false) then
                                         RecoilThirdPersonMultiplier(1.0,0.5)
                                     end
                                 end
