@@ -4,7 +4,7 @@ A simple reticle script that hide it on walking or when driving. All in config
 
 https://discord.gg/6A5DxeDSmW
 
-
+https://streamable.com/2ooz4v
 MIT License
 
 Copyright (c) 2022 Cisternita
